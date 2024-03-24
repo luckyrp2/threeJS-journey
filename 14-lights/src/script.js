@@ -53,6 +53,10 @@ scene.add(spotLight.target)
 gui.add(spotLight, 'intensity').min(0).max(10).step(0.001).name('spotlight')
 gui.add(spotLight.target.position, 'x').min(-3).max(3).step(0.001).name('spotlight move')
 
+//Helpers
+const spotLightHelper = new THREE.SpotLightHelper(spotLight, 0.1)
+scene.add(spotLightHelper)
+
 /**
  * Objects
  */
